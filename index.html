@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adriana Franchini — BI Developer & Data Analyst Portfolio</title>
+<title>Adriana Franchini — BI Developer & Zoho Analytics Consultant</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -59,10 +59,10 @@
   }
   .brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces'; font-weight:600; font-size:18px;}
   .brand .dot{width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 10px var(--gold);}
-  .navlinks{display:flex; gap:28px; font-size:12.5px; color:var(--muted); font-family:'JetBrains Mono'; letter-spacing:0.03em;}
+  .navlinks{display:flex; gap:22px; font-size:12px; color:var(--muted); font-family:'JetBrains Mono'; letter-spacing:0.03em;}
   .navlinks a{text-decoration:none; transition:color .2s;}
   .navlinks a:hover{color:var(--violet);}
-  @media (max-width:800px){ .navlinks{display:none;} }
+  @media (max-width:1100px){ .navlinks{display:none;} }
 
   /* ---------- hero ---------- */
   .hero{ max-width:1200px; margin:0 auto; padding:90px 40px 40px; position:relative; }
@@ -108,13 +108,10 @@
     max-width:1200px; margin:70px auto 0; padding:0 40px;
     border-top:1px solid var(--line); padding-top:56px;
   }
-  .about-grid{
-    display:grid; grid-template-columns:220px 1fr; gap:50px; align-items:start;
-  }
+  .about-grid{ display:grid; grid-template-columns:220px 1fr; gap:50px; align-items:start; }
   @media (max-width:800px){ .about-grid{grid-template-columns:1fr; } }
   .avatar{
     width:180px; height:180px; border-radius:50%;
-    background:radial-gradient(circle at 30% 30%, rgba(155,109,255,0.25), var(--panel) 70%);
     border:2px solid transparent;
     background-image:radial-gradient(circle at 30% 30%, rgba(155,109,255,0.25), var(--panel) 70%),
                       linear-gradient(135deg, var(--gold), var(--violet));
@@ -132,7 +129,7 @@
     padding:12px 22px; border-radius:8px; text-decoration:none;
     font-family:'Inter'; transition:transform .15s, box-shadow .15s;
   }
-  .btn-primary:hover{ transform:translateY(-1px); box-shadow:0 6px 20px rgba(201,154,75,0.25); }
+  .btn-primary:hover{ transform:translateY(-1px); box-shadow:0 6px 20px rgba(245,185,66,0.25); }
   .btn-secondary{
     display:inline-flex; align-items:center; gap:8px;
     color:var(--text); font-size:13.5px; text-decoration:none;
@@ -141,30 +138,6 @@
   }
   .btn-secondary:hover{ border-color:var(--violet); color:var(--violet); }
 
-  /* ---------- AI agents ---------- */
-  .agent-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-  @media (max-width:850px){ .agent-grid{grid-template-columns:1fr;} }
-  .agent-card{
-    background:var(--panel); border:1px solid var(--line); border-radius:12px;
-    padding:30px 28px; display:flex; flex-direction:column; gap:18px;
-  }
-  .agent-card .agent-icon{
-    width:44px; height:44px; border-radius:10px;
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Fraunces'; font-weight:600; font-size:18px;
-    color:var(--ink);
-  }
-  .agent-card h3{ font-size:19px; font-weight:600; }
-  .agent-card .role{ font-family:'JetBrains Mono'; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-top:-12px;}
-  .agent-card p{ color:var(--muted); font-size:14.5px; }
-  .agent-card ul{ list-style:none; display:flex; flex-direction:column; gap:8px; }
-  .agent-card ul li{ font-size:14px; color:var(--text); padding-left:18px; position:relative; }
-  .agent-card ul li::before{ content:'—'; position:absolute; left:0; color:var(--muted); }
-  .agent-impact{
-    margin-top:auto; padding-top:16px; border-top:1px solid var(--line);
-    font-size:13.5px; color:var(--text);
-  }
-  .agent-impact b{ color:var(--gold); }
   .intro{
     max-width:1200px; margin:70px auto 0; padding:0 40px;
     display:grid; grid-template-columns:1fr 1fr; gap:60px;
@@ -178,7 +151,7 @@
   section.case{ max-width:1200px; margin:0 auto; padding:110px 40px 0; border-top:1px solid var(--line); }
   section.case:last-of-type{ padding-bottom:110px; }
   .case-head{ display:grid; grid-template-columns:1fr 1.3fr; gap:60px; margin-bottom:50px; align-items:start;}
-  @media (max-width:900px){ .case-head{grid-template-columns:1fr;} }
+  @media (max-width:900px){ .case-head{grid-template-columns:1fr; gap:24px;} }
   .case-tag{
     display:inline-flex; align-items:center; gap:8px;
     font-family:'JetBrains Mono'; font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase;
@@ -187,11 +160,17 @@
   .case-tag .sq{width:7px; height:7px; border-radius:1px;}
   .case h2{ font-size:clamp(23px,2.8vw,31px); margin-bottom:16px; font-weight:600;}
   .case .problem{ color:var(--muted); font-size:15px;}
+  .case .problem p + p{ margin-top:12px; }
   .case .problem strong{ color:var(--text); font-weight:500;}
+
+  .case-meta{ margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+  @media (max-width:800px){ .case-meta{grid-template-columns:1fr; gap:0;} }
   .meta-row{ display:flex; gap:16px; padding:14px 0; border-top:1px solid var(--line); }
   .meta-row:first-child{border-top:none;}
   .meta-row .k{ font-family:'JetBrains Mono'; font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; width:120px; flex-shrink:0; padding-top:2px;}
   .meta-row .v{ font-size:14px; color:var(--text); }
+  .meta-row.reveal{ background:rgba(245,185,66,0.06); border-left:2px solid var(--gold); padding-left:14px; border-radius:0 6px 6px 0; }
+  .meta-row.reveal .k{ color:var(--gold); }
   .stack{ display:flex; flex-wrap:wrap; gap:8px; }
   .stack span{ font-family:'JetBrains Mono'; font-size:11px; padding:4px 10px; background:var(--panel-light); border-radius:5px; color:var(--violet); }
 
@@ -200,13 +179,53 @@
   .monitor-topbar .dots{ display:flex; gap:6px; }
   .monitor-topbar .dots span{ width:8px; height:8px; border-radius:50%; background:var(--line);}
   .monitor-topbar .title{ font-family:'JetBrains Mono'; font-size:10.5px; color:var(--muted); letter-spacing:0.05em;}
-  .dash-grid{ display:grid; grid-template-columns:1.3fr 1fr; grid-template-rows:auto auto; gap:12px; background:var(--panel); border-radius:8px; padding:20px; }
+  .dash-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:12px; background:var(--panel); border-radius:8px; padding:20px; }
   @media (max-width:900px){ .dash-grid{grid-template-columns:1fr;} }
   .card{ background:var(--panel-light); border-radius:8px; padding:18px 18px 12px; min-height:230px; display:flex; flex-direction:column; }
   .card .card-title{ font-size:12px; color:var(--muted); font-family:'JetBrains Mono'; margin-bottom:10px; letter-spacing:0.01em;}
   .card .card-title b{ color:var(--text); font-weight:500;}
   .card .chart-wrap{ flex:1; display:flex; align-items:center; justify-content:center; }
   .card .chart-wrap img{ width:100%; height:auto; }
+
+  /* ---------- HTML mock tables (no images) ---------- */
+  .mock{ background:var(--panel); border-radius:8px; padding:20px; overflow-x:auto; }
+  .mock table{ width:100%; border-collapse:collapse; font-size:12.5px; min-width:560px; }
+  .mock th{ text-align:left; font-family:'JetBrains Mono'; font-size:10.5px; font-weight:500; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; padding:10px 12px; border-bottom:1px solid var(--line); }
+  .mock td{ padding:10px 12px; border-bottom:1px solid var(--line); color:var(--text); }
+  .mock td.num{ font-family:'JetBrains Mono'; text-align:right; }
+  .mock th.num{ text-align:right; }
+  .pill{ display:inline-block; font-family:'JetBrains Mono'; font-size:10.5px; padding:2px 8px; border-radius:4px; }
+  .pill.ok{ background:rgba(63,182,172,0.15); color:var(--teal); }
+  .pill.warn{ background:rgba(245,185,66,0.15); color:var(--gold); }
+  .pill.bad{ background:rgba(201,101,112,0.18); color:var(--rose); }
+  .mock .caption{ font-family:'JetBrains Mono'; font-size:11px; color:var(--muted); margin-top:12px; }
+
+  /* ---------- AI agents ---------- */
+  .agent-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  @media (max-width:850px){ .agent-grid{grid-template-columns:1fr;} }
+  .agent-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:30px 28px; display:flex; flex-direction:column; gap:18px;
+  }
+  .agent-card .agent-icon{
+    width:44px; height:44px; border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces'; font-weight:600; font-size:18px; color:var(--ink);
+  }
+  .agent-card h3{ font-size:19px; font-weight:600; }
+  .agent-card .role{ font-family:'JetBrains Mono'; font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-top:-12px;}
+  .agent-card p{ color:var(--muted); font-size:14.5px; }
+  .agent-card ul{ list-style:none; display:flex; flex-direction:column; gap:8px; }
+  .agent-card ul li{ font-size:14px; color:var(--text); padding-left:18px; position:relative; }
+  .agent-card ul li::before{ content:'—'; position:absolute; left:0; color:var(--muted); }
+  .big-stat{ display:flex; align-items:baseline; gap:12px; padding:16px 18px; background:var(--panel-light); border-radius:8px; }
+  .big-stat .n{ font-family:'Fraunces'; font-size:40px; font-weight:600; color:var(--gold); line-height:1; }
+  .big-stat .l{ font-size:13.5px; color:var(--text); }
+  .agent-impact{
+    margin-top:auto; padding-top:16px; border-top:1px solid var(--line);
+    font-size:13.5px; color:var(--text);
+  }
+  .agent-impact b{ color:var(--gold); }
 
   footer{
     max-width:1200px; margin:0 auto; padding:60px 40px 80px;
@@ -218,20 +237,25 @@
   footer .contact{ font-family:'JetBrains Mono'; font-size:12.5px; display:flex; flex-direction:column; gap:6px; align-items:flex-end;}
   footer .contact a{ color:var(--gold); text-decoration:none; }
   footer .contact a:hover{ text-decoration:underline; }
-  @media (max-width:700px){ footer{flex-direction:column; align-items:flex-start;} footer .contact{align-items:flex-start;} }
+  @media (max-width:700px){
+    footer{flex-direction:column; align-items:flex-start;} footer .contact{align-items:flex-start;}
+    nav, .hero, .about, .intro, section.case, footer{ padding-left:16px; padding-right:16px; }
+  }
 </style>
 </head>
 <body>
 
-<div class="ribbon">All data shown on this page is <strong>synthetic</strong> — generated for demonstration purposes, no real client or company data</div>
+<div class="ribbon">Real projects, <strong>anonymized</strong> under GDPR and confidentiality agreements — all figures and dashboards use <strong>synthetic data</strong></div>
 
 <nav>
   <div class="brand"><span class="dot"></span> Adriana Franchini</div>
   <div class="navlinks">
     <a href="#about">ABOUT</a>
     <a href="#campaigns">MARKETING</a>
-    <a href="#crm">CRM</a>
+    <a href="#crm">SALES</a>
     <a href="#desk">HELPDESK</a>
+    <a href="#regulatory">REGULATORY</a>
+    <a href="#migration">MIGRATION</a>
     <a href="#projects">PROJECTS</a>
     <a href="#people">PEOPLE</a>
     <a href="#finance">FINANCE</a>
@@ -240,17 +264,17 @@
 </nav>
 
 <div class="hero">
-  <div class="eyebrow">Portfolio — Business Intelligence & Analytics</div>
+  <div class="eyebrow">Portfolio — Business Intelligence on Zoho Analytics</div>
   <h1>Six separate systems.<br>One <em>single language</em> to read them.</h1>
-  <p class="lead">Marketing, sales, support, projects, people, finance: data living in different corners of the business, in different platforms that rarely talk to each other. My job is building the layer that connects them — dashboards management can read in thirty seconds.</p>
+  <p class="lead">Marketing, sales, support, projects, people, finance: data living in different Zoho apps and legacy tools that rarely talk to each other. My job is building the layer in Zoho Analytics that connects them — and checking that the numbers are true before anyone decides on them.</p>
 
   <div class="board" id="board">
-    <div class="tile"><span class="statusdot pulse" style="background:var(--violet)"></span><div class="modname">Marketing</div><div><div class="kpi mono" data-target="190" id="k0">0</div><div class="kpilabel">Avg. campaign ROI %</div></div></div>
-    <div class="tile"><span class="statusdot pulse" style="background:var(--gold)"></span><div class="modname">CRM &amp; Sales</div><div><div class="kpi mono" data-target="1284" id="k1">0</div><div class="kpilabel">Active pipeline (k€)</div></div></div>
-    <div class="tile"><span class="statusdot pulse" style="background:var(--violet)"></span><div class="modname">Helpdesk</div><div><div class="kpi mono" data-target="94" id="k2">0</div><div class="kpilabel">SLA compliance %</div></div></div>
-    <div class="tile"><span class="statusdot pulse" style="background:var(--gold)"></span><div class="modname">Projects</div><div><div class="kpi mono" data-target="18" id="k3">0</div><div class="kpilabel">Active projects</div></div></div>
-    <div class="tile"><span class="statusdot pulse" style="background:var(--violet)"></span><div class="modname">People Ops</div><div><div class="kpi mono" data-target="7" id="k4">0</div><div class="kpilabel">Turnover % YTD</div></div></div>
-    <div class="tile"><span class="statusdot pulse" style="background:var(--gold)"></span><div class="modname">Finance</div><div><div class="kpi mono" data-target="342" id="k5">0</div><div class="kpilabel">Cash flow (k€)</div></div></div>
+    <div class="tile"><span class="statusdot pulse" style="background:var(--violet)"></span><div class="modname">Marketing</div><div><div class="kpi mono" data-target="190">0</div><div class="kpilabel">Avg. campaign ROI %</div></div></div>
+    <div class="tile"><span class="statusdot pulse" style="background:var(--gold)"></span><div class="modname">CRM &amp; Sales</div><div><div class="kpi mono" data-target="1284">0</div><div class="kpilabel">Active pipeline (k€)</div></div></div>
+    <div class="tile"><span class="statusdot pulse" style="background:var(--violet)"></span><div class="modname">Helpdesk</div><div><div class="kpi mono" data-target="94">0</div><div class="kpilabel">SLA compliance %</div></div></div>
+    <div class="tile"><span class="statusdot pulse" style="background:var(--gold)"></span><div class="modname">Projects</div><div><div class="kpi mono" data-target="18">0</div><div class="kpilabel">Active projects</div></div></div>
+    <div class="tile"><span class="statusdot pulse" style="background:var(--violet)"></span><div class="modname">People Ops</div><div><div class="kpi mono" data-target="7">0</div><div class="kpilabel">Turnover % YTD</div></div></div>
+    <div class="tile"><span class="statusdot pulse" style="background:var(--gold)"></span><div class="modname">Finance</div><div><div class="kpi mono" data-target="342">0</div><div class="kpilabel">Cash flow (k€)</div></div></div>
   </div>
 </div>
 
@@ -259,8 +283,8 @@
     <div class="avatar">AF</div>
     <div>
       <div class="eyebrow" style="margin-bottom:14px;">About</div>
-      <h2>Data Analyst with a Master's in Data Science, building BI on top of CRM, financial and operational data.</h2>
-      <p class="bio">I currently work as a Data Analyst at CRM Partners, where I analyze CRM, financial and recruiting data using SQL, Python and BI tools (Zoho Analytics, Tableau, Power BI) to build dashboards that support decision-making, configure CRM systems, and train client teams on tool adoption. Before moving into data, I spent several years leading operations in hospitality and coaching — managing teams, vendors, and client relationships under pressure. That background is why I design dashboards for the person who has to act on the numbers, not just the person who requested them.</p>
+      <h2>BI Developer &amp; Consultant with a Master's in Data Science, building BI on Zoho Analytics.</h2>
+      <p class="bio">I work at CRM Partners, a Zoho partner, where I design reporting in Zoho Analytics on top of Zoho CRM, Desk, People, Projects and Books, migrate legacy data into new CRM instances, and train client teams on adoption. Day to day that means SQL Query Tables, Deluge formulas, row-level security — and a lot of checking whether a number is real before it reaches a dashboard. Before data, I spent several years leading operations in hospitality and coaching, which is why I design dashboards for the person who has to act on the numbers, not just the person who requested them.</p>
       <div class="cta-row">
         <a class="btn-primary" href="Adriana_Franchini_CV_EN.pdf" download>↓ Download CV</a>
         <a class="btn-secondary" href="https://www.linkedin.com/in/adriana-franchini/" target="_blank" rel="noopener">LinkedIn</a>
@@ -273,11 +297,11 @@
 <div class="intro">
   <div>
     <div class="label">Who's behind these dashboards</div>
-    <p>BI Developer &amp; Consultant working across business platforms. I configure CRM systems, build data models in analytics tools, and turn information scattered across departments — marketing, sales, support, projects, HR, accounting — into tools people actually use to decide.</p>
+    <p>BI Developer &amp; Consultant across the Zoho ecosystem. I configure CRM systems, build data models in Zoho Analytics, and turn information scattered across marketing, sales, support, projects, HR and accounting into tools people actually use to decide.</p>
   </div>
   <div>
     <div class="label">How to read this portfolio</div>
-    <p>Each section is a real case, with data replaced by synthetic sets: the business problem it addressed, the technical challenge solved at the data-model level, and the resulting dashboard.</p>
+    <p>Every section comes from a real client project. Client names, figures and data are withheld under GDPR and confidentiality agreements; dashboards are rebuilt on synthetic data. What is real: the business problem, what the data revealed once I looked closely, and how it was solved in the data model.</p>
   </div>
 </div>
 
@@ -289,7 +313,7 @@
       <h2>Marketing couldn't say which campaign actually drove pipeline.</h2>
     </div>
     <div class="problem">
-      <p><strong>Problem:</strong> email blasts, social posts, and paid ads were tracked in isolation, with no shared tagging convention — so nobody could tell which channel turned a click into a paying customer.</p>
+      <p><strong>Problem:</strong> web traffic lived in the web analytics tool, leads lived in the CRM, and nothing linked a click to a deal. Campaign reports counted sessions, not customers.</p>
     </div>
   </div>
 
@@ -303,12 +327,13 @@
     </div>
   </div>
 
-  <div style="margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+  <div class="case-meta">
     <div>
-      <div class="meta-row"><div class="k">Challenge</div><div class="v">Built a consistent UTM and click-ID tagging convention so every session could be traced from ad click to closed deal in the CRM.</div></div>
-      <div class="meta-row"><div class="k">Result</div><div class="v">Marketing could finally rank campaigns by pipeline contribution, not just clicks — budget reallocated toward what actually converted.</div></div>
+      <div class="meta-row"><div class="k">Challenge</div><div class="v">Defined a UTM convention and a Deluge script that captures URL parameters into Lead fields at form submission, so every lead carries its source campaign into Zoho CRM.</div></div>
+      <div class="meta-row reveal"><div class="k">What the data revealed</div><div class="v">Once campaigns were joined to their touchpoints, campaigns with many touchpoints looked far more successful than they were: the one-to-many join was counting the same lead several times. Pre-aggregating touchpoints per campaign in a Query Table fixed the fan-out.</div></div>
+      <div class="meta-row"><div class="k">Result</div><div class="v">Campaigns ranked by leads and pipeline they actually generated, not by clicks — the basis for moving budget toward what converts.</div></div>
     </div>
-    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Web analytics platform</span><span>CRM platform</span><span>UTM / click-ID tracking</span><span>BI / Analytics tool</span></div></div></div>
+    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Zoho CRM</span><span>Zoho Analytics</span><span>Deluge</span><span>UTM tracking</span><span>Query Tables</span></div></div></div>
   </div>
 </section>
 
@@ -317,10 +342,10 @@
   <div class="case-head">
     <div>
       <div class="case-tag"><span class="sq" style="background:var(--gold)"></span>CRM &amp; Sales</div>
-      <h2>Management had no idea where the pipeline was leaking.</h2>
+      <h2>Sales targets lived in a spreadsheet. Actuals lived in the CRM.</h2>
     </div>
     <div class="problem">
-      <p><strong>Problem:</strong> deals were getting stuck at certain stages with no one noticing until the quarter closed. Forecasting lived in a hand-updated spreadsheet, always two weeks behind reality.</p>
+      <p><strong>Problem:</strong> management wanted each sales agent's objectives compared to orders and deals in real time, but targets were set in Excel and nobody could see progress until month-end.</p>
     </div>
   </div>
 
@@ -329,17 +354,18 @@
     <div class="dash-grid">
       <div class="card"><div class="card-title">Pipeline by <b>stage</b> (k€)</div><div class="chart-wrap"><img src="images/crm_1.png" alt="Pipeline by stage"></div></div>
       <div class="card"><div class="card-title">Lead source — <b>share %</b></div><div class="chart-wrap"><img src="images/crm_2.png" alt="Lead source breakdown"></div></div>
-      <div class="card"><div class="card-title">Forecast vs <b>achieved</b>, last 6 months</div><div class="chart-wrap"><img src="images/crm_3.png" alt="Forecast vs achieved"></div></div>
+      <div class="card"><div class="card-title">Target vs <b>achieved</b>, last 6 months</div><div class="chart-wrap"><img src="images/crm_3.png" alt="Target vs achieved"></div></div>
       <div class="card"><div class="card-title">Win rate by <b>sales rep</b></div><div class="chart-wrap"><img src="images/crm_4.png" alt="Win rate by rep"></div></div>
     </div>
   </div>
 
-  <div style="margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+  <div class="case-meta">
     <div>
-      <div class="meta-row"><div class="k">Challenge</div><div class="v">Deals stuck at intermediate stages, invisible in the standard report; fan-out on a 1-to-many Deal↔Contacts join fixed with SUM(DISTINCT...).</div></div>
-      <div class="meta-row"><div class="k">Result</div><div class="v">Real-time forecast, automatic alert on deals stalled &gt;30 days at any stage.</div></div>
+      <div class="meta-row"><div class="k">Challenge</div><div class="v">Moved target-setting into a Zoho Analytics Data Form, so managers enter objectives directly where they're reported. Month-to-date compares against the same month of the previous year, not the previous month, because the business is seasonal.</div></div>
+      <div class="meta-row reveal"><div class="k">What the data revealed</div><div class="v">The first version showed some agents with targets several times higher than agreed: each target row was multiplied by the number of orders it joined to. Aggregating orders per agent and period before the join (SUM DISTINCT pattern) brought targets back to reality.</div></div>
+      <div class="meta-row"><div class="k">Result</div><div class="v">Live target-vs-actual per agent; managers stopped rebuilding the comparison in Excel at month-end.</div></div>
     </div>
-    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>CRM platform</span><span>BI / Analytics tool</span><span>SQL query modeling</span><span>UTM / click-ID tracking</span></div></div></div>
+    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Zoho CRM</span><span>Zoho Analytics</span><span>Data Forms</span><span>Query Tables</span><span>KPI widgets</span></div></div></div>
   </div>
 </section>
 
@@ -348,10 +374,10 @@
   <div class="case-head">
     <div>
       <div class="case-tag"><span class="sq" style="background:var(--violet)"></span>Helpdesk &amp; Support</div>
-      <h2>Support felt responsive. The numbers said otherwise.</h2>
+      <h2>The time-worked report said tickets took seconds. They didn't.</h2>
     </div>
     <div class="problem">
-      <p><strong>Problem:</strong> internal perception was "good service", but there was no objective measure of SLA compliance or per-agent workload — no way to intervene before a customer complained.</p>
+      <p><strong>Problem:</strong> the support team needed total time worked per ticket and per agent from Zoho Desk, to see workload and where effort really went.</p>
     </div>
   </div>
 
@@ -360,17 +386,97 @@
     <div class="dash-grid">
       <div class="card"><div class="card-title">Tickets by <b>priority</b>, last 8 weeks</div><div class="chart-wrap"><img src="images/desk_1.png" alt="Tickets by priority"></div></div>
       <div class="card"><div class="card-title">SLA compliance — <b>trend</b></div><div class="chart-wrap"><img src="images/desk_2.png" alt="SLA compliance trend"></div></div>
-      <div class="card"><div class="card-title">Avg. resolution time (h) by <b>category</b></div><div class="chart-wrap"><img src="images/desk_3.png" alt="Resolution time by category"></div></div>
+      <div class="card"><div class="card-title">Avg. time worked (h) by <b>category</b></div><div class="chart-wrap"><img src="images/desk_3.png" alt="Time worked by category"></div></div>
       <div class="card"><div class="card-title">CSAT — <b>monthly trend</b></div><div class="chart-wrap"><img src="images/desk_4.png" alt="CSAT trend"></div></div>
     </div>
   </div>
 
-  <div style="margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+  <div class="case-meta">
     <div>
-      <div class="meta-row"><div class="k">Challenge</div><div class="v">No native field for real per-agent workload; built a model weighting open tickets × category complexity.</div></div>
-      <div class="meta-row"><div class="k">Result</div><div class="v">Workload rebalanced across agents; SLA compliance moved from a silent risk to a metric tracked weekly.</div></div>
+      <div class="meta-row"><div class="k">Challenge</div><div class="v">Time entries sit one level below tickets, so totals per ticket double-counted as soon as tickets were joined to anything else; time was pre-aggregated per ticket first.</div></div>
+      <div class="meta-row reveal"><div class="k">What the data revealed</div><div class="v">The standard seconds-to-hours conversion produced absurd results. Checking raw values against Desk showed that in this instance time worked was already stored as decimal hours. The lesson I now apply everywhere: validate the unit against the source before writing a single formula.</div></div>
+      <div class="meta-row"><div class="k">Result</div><div class="v">Reliable time-worked figures per ticket, category and agent — workload became a weekly metric instead of an impression.</div></div>
     </div>
-    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Helpdesk platform</span><span>BI / Analytics tool</span><span>Custom formulas</span></div></div></div>
+    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Zoho Desk</span><span>Zoho Analytics</span><span>Formula columns</span><span>Query Tables</span></div></div></div>
+  </div>
+</section>
+
+<!-- ============ REGULATORY ============ -->
+<section class="case" id="regulatory">
+  <div class="case-head">
+    <div>
+      <div class="case-tag"><span class="sq" style="background:var(--gold)"></span>Regulatory Reporting</div>
+      <h2>A regulator wanted 14 numbers in a fixed layout. The data model produced none of them in that shape.</h2>
+    </div>
+    <div class="problem">
+      <p><strong>Problem:</strong> a telecom operator had to file a periodic report on customer reimbursements to the national regulator — a fixed row-by-row template, Italian number formatting, specific ordering. It was assembled by hand every period.</p>
+    </div>
+  </div>
+
+  <div class="monitor">
+    <div class="monitor-topbar"><div class="dots"><span></span><span></span><span></span></div><div class="title">regulatory-report.querytable</div><div></div></div>
+    <div class="mock">
+      <table>
+        <thead><tr><th>#</th><th>Metric</th><th class="num">Value</th><th>Check</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">01</td><td>Reimbursement requests received</td><td class="num">1.248</td><td><span class="pill ok">matches source</span></td></tr>
+          <tr><td class="mono">02</td><td>Requests accepted</td><td class="num">1.031</td><td><span class="pill ok">matches source</span></td></tr>
+          <tr><td class="mono">03</td><td>Requests rejected</td><td class="num">217</td><td><span class="pill ok">matches source</span></td></tr>
+          <tr><td class="mono">04</td><td>Average handling time (days)</td><td class="num">6,4</td><td><span class="pill ok">matches source</span></td></tr>
+          <tr><td class="mono">05</td><td>Total amount reimbursed (€)</td><td class="num">38.912,50</td><td><span class="pill ok">matches source</span></td></tr>
+          <tr><td class="mono">…</td><td>9 further metrics</td><td class="num">—</td><td><span class="pill ok">matches source</span></td></tr>
+        </tbody>
+      </table>
+      <div class="caption">Synthetic values · one UNION ALL block per metric · comma decimal separator · fixed row order</div>
+    </div>
+  </div>
+
+  <div class="case-meta">
+    <div>
+      <div class="meta-row"><div class="k">Challenge</div><div class="v">Unpivoted 14+ aggregate metrics into the regulator's row layout with UNION ALL in a Zoho Analytics Query Table, working within its limits: no parameters, a three-level cascade cap, and decimals forced to a period by to_string() — replaced with commas via REPLACE().</div></div>
+      <div class="meta-row reveal"><div class="k">What the data revealed</div><div class="v">Totals came out higher than the operator's own records. Each reimbursement request linked to several traffic records, and the join multiplied the amounts. A dedicated Query Table aggregating traffic per request before the join made the figures reconcile.</div></div>
+      <div class="meta-row"><div class="k">Result</div><div class="v">The filing became a live report, ready in the required format every period instead of being rebuilt by hand.</div></div>
+    </div>
+    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Zoho Analytics</span><span>Query Tables (SQL)</span><span>UNION ALL unpivot</span><span>Compliance reporting</span></div></div></div>
+  </div>
+</section>
+
+<!-- ============ MIGRATION ============ -->
+<section class="case" id="migration">
+  <div class="case-head">
+    <div>
+      <div class="case-tag"><span class="sq" style="background:var(--violet)"></span>CRM Data Migration</div>
+      <h2>Before moving to a new CRM, nobody knew what was really in the old one.</h2>
+    </div>
+    <div class="problem">
+      <p><strong>Problem:</strong> clients arrived with exports from legacy CRMs, project tools and custom Excel trackers, expecting them to "just be imported" into Zoho CRM. Fields were decided on gut feeling, and bad data travelled into the new system.</p>
+    </div>
+  </div>
+
+  <div class="monitor">
+    <div class="monitor-topbar"><div class="dots"><span></span><span></span><span></span></div><div class="title">field-mapping.xlsx — sheet "Fields"</div><div></div></div>
+    <div class="mock">
+      <table>
+        <thead><tr><th>Field</th><th>Zoho CRM type</th><th class="num">Fill %</th><th>Distinct</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>Company name</td><td>Single line</td><td class="num">100%</td><td class="mono">2.140</td><td><span class="pill warn">case/space variants</span></td></tr>
+          <tr><td>VAT number</td><td>Single line</td><td class="num">87%</td><td class="mono">1.902</td><td><span class="pill warn">duplicates to merge</span></td></tr>
+          <tr><td>Customer type</td><td>Pick list</td><td class="num">94%</td><td class="mono">7</td><td><span class="pill ok">ready</span></td></tr>
+          <tr><td>Last contact date</td><td>Date</td><td class="num">71%</td><td class="mono">—</td><td><span class="pill warn">placeholder 01/01/1900</span></td></tr>
+          <tr><td>Fax</td><td>Phone</td><td class="num">0%</td><td class="mono">0</td><td><span class="pill bad">do not create</span></td></tr>
+        </tbody>
+      </table>
+      <div class="caption">Synthetic example · every source field profiled: type, fill rate, distinct values, top repetitions</div>
+    </div>
+  </div>
+
+  <div class="case-meta">
+    <div>
+      <div class="meta-row"><div class="k">Challenge</div><div class="v">Built a standard field-mapping deliverable: each source field profiled with proposed Zoho CRM type, fill rate, distinct values and repetitions — pick list when ≤60 distinct values — plus a log of every cleaning intervention with original and cleaned values. Nothing overwritten silently, nothing invented to fill gaps.</div></div>
+      <div class="meta-row reveal"><div class="k">What the data revealed</div><div class="v">A meaningful share of "required" fields turned out to be always empty, dates hid fake placeholders, and the same company appeared under several spellings. The mapping turned "import everything" into a conversation about which data is worth migrating.</div></div>
+      <div class="meta-row"><div class="k">Result</div><div class="v">The mapping became a named internal process with reusable templates, adopted across the team for every new client onboarding — including CRM-to-CRM migrations with duplicate checks on VAT number and company name.</div></div>
+    </div>
+    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Zoho CRM</span><span>Python / pandas</span><span>openpyxl</span><span>Data profiling</span><span>Field mapping</span></div></div></div>
   </div>
 </section>
 
@@ -382,7 +488,7 @@
       <h2>11 Excel sheets to track one project. No one opened all of them.</h2>
     </div>
     <div class="problem">
-      <p><strong>Problem:</strong> progress and budget tracking lived in a sprawling spreadsheet with 11 manually linked worksheets — every update meant manual recalculation, with no portfolio-level view.</p>
+      <p><strong>Problem:</strong> job-order progress and budget tracking lived in a sprawling spreadsheet with 11 manually linked worksheets — every update meant manual recalculation, with no portfolio-level view.</p>
     </div>
   </div>
 
@@ -396,12 +502,12 @@
     </div>
   </div>
 
-  <div style="margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+  <div class="case-meta">
     <div>
-      <div class="meta-row"><div class="k">Challenge</div><div class="v">Redesigned the AS IS → TO BE model: mapped 11 worksheets to 4 macro-areas, estimating migration effort at 15–22 person-days.</div></div>
-      <div class="meta-row"><div class="k">Result</div><div class="v">Single portfolio view, auto-updated from the project management and CRM systems, no manual re-entry of data.</div></div>
+      <div class="meta-row"><div class="k">Challenge</div><div class="v">Analyzed the AS IS workbook and designed the TO BE model on Zoho CRM and Zoho Analytics: 11 worksheets mapped to 4 macro-areas, with effort estimated at 15–22 person-days and structured for sprint planning.</div></div>
+      <div class="meta-row"><div class="k">Result</div><div class="v">Single portfolio view, updated automatically from CRM data, no manual re-entry.</div></div>
     </div>
-    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Project management tool</span><span>CRM platform</span><span>BI / Analytics tool</span><span>AS IS→TO BE migration</span></div></div></div>
+    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Zoho CRM</span><span>Zoho Analytics</span><span>AS IS → TO BE analysis</span><span>Effort estimation</span></div></div></div>
   </div>
 </section>
 
@@ -413,7 +519,7 @@
       <h2>The standard connector showed days off, not hours.</h2>
     </div>
     <div class="problem">
-      <p><strong>Problem:</strong> hourly permission fields (from/to) weren't surfaced by the standard People→Analytics connector — making it impossible to correctly calculate remaining hour balances per employee.</p>
+      <p><strong>Problem:</strong> hourly permission fields (from/to) weren't surfaced by the standard Zoho People → Analytics connector, so remaining hour balances per employee couldn't be calculated. On top of that, the working-hours report had to follow strict business rules on rounding and weekly caps.</p>
     </div>
   </div>
 
@@ -427,12 +533,13 @@
     </div>
   </div>
 
-  <div style="margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+  <div class="case-meta">
     <div>
-      <div class="meta-row"><div class="k">Challenge</div><div class="v">Connector limitation solved with an API-based workaround to retrieve the missing from/to hour fields in synced reports.</div></div>
-      <div class="meta-row"><div class="k">Result</div><div class="v">Row-level security based on the logged-in user's email: each employee sees only their own timesheet, HR sees everything.</div></div>
+      <div class="meta-row"><div class="k">Challenge</div><div class="v">Retrieved the missing from/to hour fields via the Zoho People API; implemented cascading rounding and weekly-cap logic in the hours report.</div></div>
+      <div class="meta-row reveal"><div class="k">What the data revealed</div><div class="v">Weekly totals were shifted by a day: the weekday function numbered Monday as 0, not 1. Since then I validate every date function against a known reference date before trusting it.</div></div>
+      <div class="meta-row"><div class="k">Result</div><div class="v">Row-level security on the logged-in user's email (${System.login.email}): each employee sees only their own timesheet, HR sees everything.</div></div>
     </div>
-    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>HRIS platform</span><span>Analytics API</span><span>Row-level security</span></div></div></div>
+    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Zoho People</span><span>Zoho Analytics</span><span>REST API</span><span>Row-level security</span></div></div></div>
   </div>
 </section>
 
@@ -458,12 +565,12 @@
     </div>
   </div>
 
-  <div style="margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+  <div class="case-meta">
     <div>
-      <div class="meta-row"><div class="k">Challenge</div><div class="v">Cross-module Query Table joining hours from Projects, costs from Books and revenue from CRM on a shared project key.</div></div>
+      <div class="meta-row"><div class="k">Challenge</div><div class="v">Cross-module Query Table joining hours from Zoho Projects, costs from Zoho Books and revenue from Zoho CRM on a shared project key.</div></div>
       <div class="meta-row"><div class="k">Result</div><div class="v">Project-level margin visible in real time, no longer manually rebuilt by the CFO in Excel at quarter-end.</div></div>
     </div>
-    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Accounting platform</span><span>Project management tool</span><span>CRM platform</span><span>Cross-module SQL modeling</span></div></div></div>
+    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Zoho Books</span><span>Zoho Projects</span><span>Zoho CRM</span><span>Zoho Analytics</span><span>Cross-module SQL</span></div></div></div>
   </div>
 </section>
 
@@ -475,7 +582,7 @@
       <h2>Two AI assistants built in-house to remove the most repetitive parts of the job.</h2>
     </div>
     <div class="problem">
-      <p><strong>Context:</strong> beyond dashboards, I design internal AI tools that support the rest of the team on the two most recurring bottlenecks: messy source data, and BI query know-how that used to live only in one person's head.</p>
+      <p><strong>Context:</strong> almost every case above started with the same two bottlenecks — messy source data before an import, and Zoho Analytics know-how that had to be re-solved every time someone hit the same wall. So I built tools for both.</p>
     </div>
   </div>
 
@@ -483,46 +590,47 @@
     <div class="agent-card">
       <div class="agent-icon" style="background:var(--gold);">01</div>
       <div>
-        <h3>Spreadsheet Cleaning Assistant</h3>
-        <div class="role">Data preparation · Excel / spreadsheets</div>
+        <h3>ExcelliArmus</h3>
+        <div class="role">Data cleaning assistant · Zoho &amp; Freshworks imports</div>
       </div>
-      <p>Client and partner files arrived in every format imaginable before they could be imported into our systems — inconsistent dates, broken formulas, duplicate rows. Reformatting them manually ate hours out of every import.</p>
+      <p>Client files arrived in every format imaginable — inconsistent dates, duplicates, broken formulas, columns that matched nothing in the target CRM. Cleaning them by hand ate hours out of every import.</p>
+      <div class="big-stat"><div class="n">−60%</div><div class="l">time the team spends on data quality before each import</div></div>
       <ul>
-        <li>Normalizes column formats, date conventions and units across sheets</li>
-        <li>Flags duplicate, missing or inconsistent records before import</li>
-        <li>Rewrites broken or fragile formulas into stable ones</li>
-        <li>Outputs a file ready to import directly into CRM / BI systems</li>
+        <li>Column mapping to Zoho and Freshworks import fields</li>
+        <li>Validation of formats, dates and required values</li>
+        <li>Joins across multiple source files, with fuzzy matching for near-duplicates</li>
+        <li>Delivered as a no-install Gemini Gem, plus two Python Flask versions: rule-based, and one running a local LLM (Ollama / Mistral) so client data never leaves the machine</li>
       </ul>
-      <div class="agent-impact">Turned a multi-hour manual cleanup into a <b>same-day, self-serve step</b> the whole team can run before any import.</div>
+      <div class="agent-impact">Turned a multi-hour manual cleanup into a <b>self-serve step</b> the whole team runs before any import — with a privacy-first option for sensitive datasets.</div>
     </div>
 
     <div class="agent-card">
       <div class="agent-icon" style="background:var(--violet);">02</div>
       <div>
-        <h3>Analytics Query Assistant</h3>
-        <div class="role">BI query building · Formula troubleshooting</div>
+        <h3>Zoho Analytics Query Assistant</h3>
+        <div class="role">Query Tables · Formula troubleshooting</div>
       </div>
-      <p>Query and formula know-how — how to avoid fan-out on 1-to-many joins, how to structure row-level security, which aggregate pattern fits which report — lived in one person's head and got re-solved from scratch every time someone else hit the same wall.</p>
+      <p>The lessons in this portfolio — fan-out on one-to-many joins, quoting rules that differ between Query Tables and formula columns, Query Table nesting limits, row-level security — used to live in one person's head.</p>
       <ul>
-        <li>Drafts aggregate formulas and SQL-style query logic on request</li>
-        <li>Diagnoses fan-out and duplication issues in joined tables</li>
-        <li>Explains row-level security and access-control patterns</li>
-        <li>Helps draft clear, professional support responses for clients</li>
+        <li>Drafts aggregate formulas and Query Table SQL on request</li>
+        <li>Diagnoses fan-out and duplication in joined tables</li>
+        <li>Knows Zoho Analytics limits and suggests native features before custom SQL</li>
+        <li>Drafts clear technical support replies for clients in English</li>
       </ul>
-      <div class="agent-impact">Standardized how the team writes and debugs queries — <b>less tribal knowledge</b>, faster onboarding on new reports.</div>
+      <div class="agent-impact">Standardized how the team writes and debugs reports — <b>less tribal knowledge</b>, faster onboarding on new projects.</div>
     </div>
   </div>
 
-  <div style="margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:40px;">
-    <div class="meta-row"><div class="k">Approach</div><div class="v">Both were scoped, built and iterated by me for internal use — not off-the-shelf tools, but assistants shaped around how our team actually works.</div></div>
-    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Custom AI assistant</span><span>Prompt engineering</span><span>Python / Flask</span><span>BI query language</span></div></div></div>
+  <div class="case-meta">
+    <div class="meta-row"><div class="k">Approach</div><div class="v">Scoped, built and iterated by me for internal use at CRM Partners — not off-the-shelf tools, but assistants shaped around how our team actually works.</div></div>
+    <div class="meta-row"><div class="k">Stack</div><div class="v"><div class="stack"><span>Gemini Gems</span><span>Python / Flask</span><span>Ollama / Mistral</span><span>Prompt engineering</span><span>Zoho Analytics SQL</span></div></div></div>
   </div>
 </section>
 
 <footer>
   <div>
     <div class="fmark">Adriana Franchini</div>
-    <p class="fnote">BI Developer &amp; Consultant · Business Intelligence &amp; Data Analytics. All dashboards above are reconstructions with synthetic data based on real work carried out across marketing, CRM, support, projects, HR and finance systems. No client data was used.</p>
+    <p class="fnote">BI Developer &amp; Consultant · Zoho Analytics. Every case above comes from real client work; client names and data are withheld under GDPR and confidentiality agreements, and all dashboards are rebuilt on synthetic data.</p>
   </div>
   <div class="contact">
     <a href="mailto:adry.f.af@gmail.com">adry.f.af@gmail.com</a>
@@ -541,6 +649,9 @@ document.querySelectorAll('.kpi[data-target]').forEach(el=>{
   }, 30);
 });
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
